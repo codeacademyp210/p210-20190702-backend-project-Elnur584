@@ -1,0 +1,188 @@
+﻿
+@{
+    ViewBag.Title = "PaymentList";
+}
+@section style{
+
+    <link href="~/Areas/Public/vendors/air-datepicker-master/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <!-- end of global css -->
+    <!-- page level css -->
+    <link type="text/css" href="~/Areas/Public/vendors/jquery-circliful/css/jquery.circliful.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="~/Areas/Public/vendors/jquery-plugin-circliful-master/css/jquery.circliful.css"> -->
+    <link type="text/css" href="~/Areas/Public/vendors/progressbar/css/bootstrap-progressbar.min.css" rel="stylesheet">
+    <link type="text/css" href="~/Areas/Public/vendors/fullcalendar/css/fullcalendar.css" rel="stylesheet">
+    <link type="text/css" href="~/Areas/Public/vendors/select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link type="text/css" href="~/Areas/Public/css/custom_css/calendar_custom.css" rel="stylesheet">
+    <link type="text/css" href="~/Areas/Public/vendors/sweetalert/dist/sweetalert2.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/Areas/Public/vendors/nvd3chart/nv.d3.min.css">
+    <link type="text/css" href="~/Areas/Public/css/custom_css/fitness.css" rel="stylesheet" />
+    <link type="text/css" href="~/Areas/Public/css/custom_css/panel.css" rel="stylesheet" />
+    <link type="text/css" href="~/Areas/Public/css/custom_css/admin_dashboard.css" rel="stylesheet">}
+<aside class="right-side right-padding">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <!--section starts-->
+        <h2>Payments</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-fw fa-home"></i> Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="#">Users</a>
+            </li>
+            <li>
+                <a href="admin_userpayment.html">Payments</a>
+            </li>
+        </ol>
+    </section>
+    <!--section ends-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="box-model">
+                    <h5>Pending Payments</h5>
+                    <div id="bar-chart-stacked" class="flotChart1"></div>
+                </div>
+            </div>
+            <div class="col-lg-3 ">
+                <div class="box-model">
+                    <h5 class="text-primary">Pending Payments</h5>
+                    <h5 class="text-danger">$500.63</h5>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th>User name</th>
+                                <th>Total</th>
+                            </tr>
+                            <tr>
+                                <td>Gavin</td>
+                                <td>$61.45</td>
+                            </tr>
+                            <tr>
+                                <td>Bella</td>
+                                <td>$50</td>
+                            </tr>
+                            <tr>
+                                <td>Jacob</td>
+                                <td>$10</td>
+                            </tr>
+                            <tr>
+                                <td>Markotto</td>
+                                <td>$80</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- Basic charts strats here-->
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <i class="fa fa-fw fa-file-text-o"></i> Pending Payments
+                        </h4>
+                        <span class="pull-right">
+                            <i class="glyphicon glyphicon-chevron-up showhide clickable"></i>
+                            <i class="glyphicon glyphicon-remove removepanel"></i>
+                        </span>
+                    </div>
+                    <div class="panel-body table-responsive">
+                        <table class="table table-bordered" id="fitness-table">
+                            <thead>
+                                <tr>
+                                    <th>Username</th>
+                                    <th>Course</th>
+                                    <th>Trainer Name</th>
+                                    <th>Email</th>
+                                    <th>Payment Due</th>
+                                    <th>Total Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bella</td>
+                                    <td>Yoga</td>
+                                    <td>John Doe</td>
+                                    <td>gankunding@hotmail.com</td>
+                                    <td>$20</td>
+                                    <td>$60</td>
+                                </tr>
+                                <tr>
+                                    <td>JacobThornton</td>
+                                    <td>Fitness</td>
+                                    <td>Clara S.Roberson</td>
+                                    <td>JacobThornton@test.com</td>
+                                    <td>$10</td>
+                                    <td>$80</td>
+                                </tr>
+                                <tr>
+                                    <td>Markotto</td>
+                                    <td>Aerobics</td>
+                                    <td>Dominick Williams</td>
+                                    <td>Markotto@test.com</td>
+                                    <td>$50</td>
+                                    <td>$00</td>
+                                </tr>
+                                <tr>
+                                    <td>Sonya</td>
+                                    <td>Body Building</td>
+                                    <td>Darin Gross</td>
+                                    <td>Sonya@test.com</td>
+                                    <td>$20</td>
+                                    <td>$100</td>
+                                </tr>
+                                <tr>
+                                    <td>Gavin</td>
+                                    <td>Yoga</td>
+                                    <td>John Doe</td>
+                                    <td>Gavin@test.com</td>
+                                    <td>$30</td>
+                                    <td>$40</td>
+                                </tr>
+                                <tr>
+                                    <td>Timothy</td>
+                                    <td>Life Time Membership</td>
+                                    <td>Clara S.Roberson</td>
+                                    <td>Timothy@test.com</td>
+                                    <td>$50</td>
+                                    <td>$100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.content -->
+</aside>
+@section script{
+    <!-- global js -->
+    <script src="~/Areas/Public/js/jquery.min.js" type="text/javascript"></script>
+    <script src="~/Areas/Public/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/Areas/Public/js/custom_js/app.js" type="text/javascript"></script>
+    <script src="~/Areas/Public/js/custom_js/metisMenu.js" type="text/javascript"></script>
+    <script src="~/Areas/Public/js/custom_js/backstretch.js"></script>
+    <!-- end of global level js -->
+    <script src="~/Areas/Public/vendors/jquery-circliful/js/jquery.circliful.min.js" type="text/javascript"></script>
+    <script src="~/Areas/Public/vendors/progressbar/bootstrap-progressbar.min.js" type="text/javascript"></script>
+    @*<script src="~/Areas/Public/vendors/countUp/countUp.js" type="text/javascript"></script>*@
+    <script src="~/Areas/Public/vendors/moment/min/moment.min.js" type="text/javascript"></script>
+    <!-- date picker -->
+    <script src="~/Areas/Public/vendors/air-datepicker-master/dist/js/datepicker.min.js"></script>
+    <script src="~/Areas/Public/vendors/air-datepicker-master/dist/js/i18n/datepicker.en.js"></script>
+    <!-- date picker end -->
+    <script src="~/Areas/Public/vendors/sweetalert/dist/sweetalert2.js" type="text/javascript"></script>
+    <script src="~/Areas/Public/vendors/fullcalendar/fullcalendar.js" type="text/javascript"></script>
+    <script src="~/Areas/Public/vendors/d3-chart/d3.v3.min.js" type="text/javascript"></script>
+    <script src="~/Areas/Public/vendors/nvd3chart/nv.d3.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="~/Areas/Public/vendors/jquery-easy-ticker-master/jquery.easy-ticker.min.js"></script>
+    <script src="~/Areas/Public/vendors/inputmask/inputmask/inputmask.js" type="text/javascript"></script>
+    <script src="~/Areas/Public/vendors/inputmask/inputmask/jquery.inputmask.js" type="text/javascript"></script>
+    <script src="~/Areas/Public/vendors/inputmask/inputmask/inputmask.date.extensions.js" type="text/javascript"></script>
+    <script src="~/Areas/Public/js/custom_js/admin_index.js" type="text/javascript"></script>
+}
